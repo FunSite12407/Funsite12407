@@ -1,7 +1,12 @@
 .chap_name {
     color: black;
+    font-size: x-large;
 }
 
 .paper {
     color: darkslategray;
+    font-size: x-large;
+}
+body {
+    background-image: url(../img/iinbgimg.jpg);
 }
