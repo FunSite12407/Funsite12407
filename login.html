@@ -68,7 +68,7 @@
 
 <div class="container">
     <h2>Login</h2>
-    <form action="home.html">
+    <form action="index.html">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -88,7 +88,7 @@
         if (username === "admin" && password === "password") {
             return true;
             // Allow form submission
-            window.location.assign('home.html');
+            window.location.assign('index.html');
 
         } else {
             alert("Invalid username or password");
