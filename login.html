@@ -68,7 +68,7 @@
 
 <div class="container">
     <h2>Login</h2>
-    <form action="login.html" onsubmit="func()">
+    <form action="index.html" onsubmit="func(event)">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
 
@@ -80,21 +80,22 @@
 </div>
 
 <script>
-    function func() {
+    function func(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
 
         // Example condition (replace with your own)
-        if (username == "admin" && password == "password") {
-            // Allow form submission
-            window.location.assign("index.html");
-
+        if (username === "admin" && password === "password") {
+            // Redirect to index.html
+            window.location.href = "index.html";
         } else {
             alert("Invalid username or password");
-            return false; // Prevent form submission
         }
     }
 </script>
+
 
 </body>
 
