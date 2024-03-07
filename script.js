@@ -12,5 +12,8 @@ function handleLogin(event) {
         alert("Invalid username or password. Please try again.");
     }
 }
+if (!isLoggedIn && window.location.pathname !== "/login.html") {
+    window.location.href = "/login.html";
+  }
 
 document.getElementById("loginForm").addEventListener("submit", handleLogin);
