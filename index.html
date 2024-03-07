@@ -10,26 +10,92 @@
 </head>
 
 <body style="background-image: url(img/bgimg.jpg);">
-    <div class="banner">
-        <div class="content">
-            <h1> WELCOME TO FUNSITE</h1>
-        </div>
-        <div class="button">
-            <button type="button"><a class="sub_name" href="subs/os.html">OPERATING SYSTEM</a></button>
-            <br><br>
-            <button type="button"><a class="sub_name" href="subs/oop.html">OBJECT ORIENTED PROGRAMING
-                    LANGUAGE</a></button>
-            <br><br>
-            <button type="button"><a class="sub_name" href="subs/dm.html">DISCRETE MATHEMATICS</a></button>
-            <br><br>
-            <button type="button"><a class="sub_name" href="subs/pem.html">PRINCIPLES OF ECONOMICS AND
-                    MANAGEMENT</a></button>
-            <br><br>
-            <button type="button"><a class="sub_name" href="subs/coa.html">COMPUTER ORGANIZATION &
-                    ARCHITECTURE</a></button>
-        </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
 
-    </div>
+    .container {
+        width: 300px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h2 {
+        text-align: center;
+        color: #555;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin-bottom: 5px;
+        color: #555;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    button[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #45a049;
+    }
+</style>
+
+<div class="container">
+    <h2>Login</h2>
+    <form action="home.html">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+<script>
+    function func() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+        // Example condition (replace with your own)
+        if (username === "admin" && password === "password") {
+            return true;
+            // Allow form submission
+            window.location.assign('home.html');
+
+        } else {
+            alert("Invalid username or password");
+            return false; // Prevent form submission
+        }
+    }
+</script>
 
 </body>
 
