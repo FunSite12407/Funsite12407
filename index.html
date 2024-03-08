@@ -81,21 +81,37 @@
     </div>
 
     <script>
+        // Array of user credentials
+        var users = [
+            { email: "admin@gmail.com", password: "admin123" },
+            { email: "user1@gmail.com", password: "user123" },
+            { email: "user2@gmail.com", password: "user456" },
+            // Add more users below
+            { email: "user3@gmail.com", password: "user789" },
+            { email: "user4@gmail.com", password: "user012" },
+            // Add as many users as needed
+        ];
+    
         function func(event) {
             event.preventDefault(); // Prevent default form submission behavior
-
+    
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-
-            // Example condition (replace with your own)
-            if (email === "admin@gmail.com" && password === "user") {
-                // Redirect to another page within the same directory
+    
+            // Check if the entered email and password match any user
+            var authenticatedUser = users.find(function(user) {
+                return user.email === email && user.password === password;
+            });
+    
+            if (authenticatedUser) {
+                // Redirect to the content page
                 window.location.href = "cont.html";
             } else {
                 alert("Invalid email or password");
             }
         }
     </script>
+    
 
 
 </body>
