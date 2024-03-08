@@ -1,10 +1,8 @@
 let isLoggedIn = false;
 
-function handleLogin(event) {
-  event.preventDefault();
-
+  function auth(){
   var email = document.getElementById("email").value;
-var password = document.getElementById("password").value;
+  var password = document.getElementById("password").value;
 
 if(email == "admin@gmail.com" && password == "user")
 {
