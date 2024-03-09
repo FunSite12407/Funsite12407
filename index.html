@@ -110,6 +110,7 @@
             });
     
             if (authenticatedUser) {
+                authenticatedUser.isLoggedIn = true;
                 // Redirect to the content page
                 window.location.href = "cont.html";
             } else {
