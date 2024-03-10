@@ -82,35 +82,32 @@
     </div>
     
     <script>
-        var loggedInUsers = [];
-        // Array of user credentials
+        // Retrieve registered email and populate the login form
+        window.onload = function() {
+            var registeredEmail = localStorage.getItem("registeredEmail");
+            var registeredPassword = localStorage.getItem("registeredPassword");
+
+            if (registeredEmail && registeredPassword) {
+                document.getElementById("email").value = registeredEmail;
+                document.getElementById("password").value = registeredPassword;
+            }
+        };
+
         var users = [
-            { email: "admin@gmail.com", password: "admin123" },
-            { email: "dhyeya@gmail.com", password: "user705", isLoggedIn: false },
-            { email: "dev@gmail.com", password: "user709", isLoggedIn: false },
-            { email: "viyom@gmail.com", password: "user710", isLoggedIn: false },
-            { email: "hemanshu@gmail.com", password: "user713", isLoggedIn: false },
-            { email: "nandan@gmail.com", password: "user714", isLoggedIn: false },
-            { email: "purvanshu@gmail.com", password: "user715", isLoggedIn: false },
-            { email: "tejas@gmail.com", password: "user723", isLoggedIn: false },
-            { email: "mihir@gmail.com", password: "user734", isLoggedIn: false },
-            // Add more users below
-            { email: "user3@gmail.com", password: "user799", isLoggedIn: false },
-            { email: "user4@gmail.com", password: "user012", isLoggedIn: false },
-            // Add as many users as needed
+            // Your user data array
         ];
-    
-        function func(event) {
-            event.preventDefault(); // Prevent default form submission behavior
-    
+
+        document.getElementById("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-    
+
             // Check if the entered email and password match any user
             var authenticatedUser = users.find(function(user) {
                 return user.email === email && user.password === password;
             });
-    
+
             if (authenticatedUser) {
                 authenticatedUser.isLoggedIn = true;
                 // Redirect to the content page
@@ -118,7 +115,7 @@
             } else {
                 alert("Invalid email or password");
             }
-        }
+        });
     </script>
     
 
