@@ -7,6 +7,8 @@
     <title>Funsite</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<body id="loginpage" style="background-image: url(img/bgimg.jpg);">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,10 +64,9 @@
         }
     </style>
 
-<body id="loginpage" style="background-image: url(img/bgimg.jpg);">
     <div class="container">
         <h2>Login</h2>
-        <form id="form">
+        <form id="form" action="" method="GET">
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" id="email" class="form-control" aria-describedby="emailHelp">
@@ -75,37 +76,41 @@
                 <label for="password">Password</label>
                 <input type="password" id="password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-outline-success btn-lg shadow">Submit</button>
+            <button type="submit" class="btn btn-outline-success btn-lg shadow" onclick="func(event)">Submit</button>
         </form>
         <p>Don't have an account? <a href="reg.html">Register</a></p>
     </div>
-
+    
     <script>
-        // Retrieve registered email and password from local storage
-        var registeredEmail = localStorage.getItem("registeredEmail");
-        var registeredPassword = localStorage.getItem("registeredPassword");
-
-        // Populate login form with stored email and password
-        if (registeredEmail && registeredPassword) {
-            document.getElementById("email").value = registeredEmail;
-            document.getElementById("password").value = registeredPassword;
-        }
-
+        var loggedInUsers = [];
+        // Array of user credentials
         var users = [
-            // Your user data array
+            { email: "admin@gmail.com", password: "admin123" },
+            { email: "dhyeya@gmail.com", password: "user705", isLoggedIn: false },
+            { email: "dev@gmail.com", password: "user709", isLoggedIn: false },
+            { email: "viyom@gmail.com", password: "user710", isLoggedIn: false },
+            { email: "hemanshu@gmail.com", password: "user713", isLoggedIn: false },
+            { email: "nandan@gmail.com", password: "user714", isLoggedIn: false },
+            { email: "purvanshu@gmail.com", password: "user715", isLoggedIn: false },
+            { email: "tejas@gmail.com", password: "user723", isLoggedIn: false },
+            { email: "mihir@gmail.com", password: "user734", isLoggedIn: false },
+            // Add more users below
+            { email: "user3@gmail.com", password: "user799", isLoggedIn: false },
+            { email: "user4@gmail.com", password: "user012", isLoggedIn: false },
+            // Add as many users as needed
         ];
-
-        document.getElementById("form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
+    
+        function func(event) {
+            event.preventDefault(); // Prevent default form submission behavior
+    
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
-
+    
             // Check if the entered email and password match any user
             var authenticatedUser = users.find(function(user) {
                 return user.email === email && user.password === password;
             });
-
+    
             if (authenticatedUser) {
                 authenticatedUser.isLoggedIn = true;
                 // Redirect to the content page
@@ -113,8 +118,11 @@
             } else {
                 alert("Invalid email or password");
             }
-        });
+        }
     </script>
+    
+
+
 </body>
 
 </html>

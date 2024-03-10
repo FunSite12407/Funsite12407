@@ -91,7 +91,7 @@
     </div>
 
     <script>
-        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+        document.getElementById("form").addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent default form submission
             
             var email = document.getElementById("email").value;
@@ -102,10 +102,10 @@
             localStorage.setItem("registeredPassword", password);
 
             // Inform the user that registration is successful
-            alert("Registered successfully!");
+            alert("Registered successfully!\nEmail: " + email && "\nPassword: " + password);
 
-            // Optionally, redirect the user to the login page after registration
-            window.location.href = "index.html";
+            // Clear the form fields after registration
+            document.getElementById("form").reset();
         });
     </script>
 </body>
