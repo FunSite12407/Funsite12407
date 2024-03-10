@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funsite - Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        
+            background-size: cover;
+        }
+
+        .container {
+            width: 300px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #555;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body style="background-image: url(img/bgimg.jpg);";>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Perform registration logic here
+            // For simplicity, let's just display the entered email and password
+            alert("Registered successfully!\nEmail: " + email + "\nPassword: " + password);
+            
+            // Optionally, you can redirect the user to the login page after registration
+            // window.location.href = "login.html";
+        });
+    </script>
+</body>
+</html>
