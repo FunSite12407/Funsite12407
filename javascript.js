@@ -2,12 +2,7 @@ var loggedInUsers = [];
         // Array of user credentials
         var users = [
             { email: "admin@gmail.com", password: "admin123" },
-            { email: "dhyeya@gmail.com", password: "user705"},
-            { email: "dev@gmail.com", password: "user709" },
             { email: "viyomjagtap1@gmail.com", password: "viyom@2611" },
-            { email: "hemanshu@gmail.com", password: "user713" },
-            { email: "nandan@gmail.com", password: "user714" },
-            { email: "purvanshu@gmail.com", password: "user715" },
             { email: "tejas@gmail.com", password: "user723" },
             { email: "mihir@gmail.com", password: "user734" },
             // Add more users below
