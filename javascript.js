@@ -7,7 +7,7 @@ var loggedInUsers = [];
             { email: "mihir@gmail.com", password: "user734" },
             // Add more users below
             { email: "user3@gmail.com", password: "user799" },
-            { email: "user4@gmail.com", password: "user012" },
+            { email: "machhihimanshu049@gmail.com", password: "HEMANSHU01" },
             // Add as many users as needed
         ];
     
