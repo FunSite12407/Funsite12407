@@ -8,6 +8,7 @@ var loggedInUsers = [];
             // Add more users below
             { email: "dhyeyadawawala@gmail.com", password: "23dhyeya09" },
             { email: "machhihimanshu049@gmail.com", password: "HEMANSHU01" },
+            { email: "machhinandan27@gmail.com", password: "Nandan4444" },
             // Add as many users as needed
         ];
     
