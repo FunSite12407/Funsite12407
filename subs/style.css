@@ -28,4 +28,6 @@ a {
     font-size: x-large;
 }
 
-
+a:hover {
+    color: brown;
+}
