@@ -17,7 +17,7 @@
     padding: 20px 10px;
 }
 input[type="button"] {
-    width: 50%;
+    width: 79%;
     padding: 15px;
     margin: 8px;
     text-align: center;
@@ -25,7 +25,7 @@ input[type="button"] {
     border-radius: 10px;
     font-weight: bold;
     font-size: medium;
-    background-color: rgba(25, 176, 45, 0.662);
+    background-color: rgba(18, 182, 39, 0.662);
     color: #fff;
     cursor: pointer;
 }
