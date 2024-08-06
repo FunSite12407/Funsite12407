@@ -27,7 +27,7 @@ var loggedInUsers = [];
             if (authenticatedUser) {
                 authenticatedUser.isLoggedIn = true;
                 // Redirect to the content page
-                window.location.href = "select.html";
+                window.location.href = "cont.html";
             } else {
                 alert("Invalid email or password");
             }
