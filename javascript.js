@@ -1,43 +1,18 @@
-var loggedInUsers = [];
-        // Array of user credentials
-        var users = [
-            { email: "admin@gmail.com", password: "admin123" },
-            { email: "viyomjagtap1@gmail.com", password: "viyom@2611" },
-            { email: "tejas@gmail.com", password: "Tej07023" },
-            { email: "mihir@gmail.com", password: "user734" },
-            // Add more users below
-            { email: "dhyeyadawawala@gmail.com", password: "23dhyeya09" },
-            { email: "machhihimanshu049@gmail.com", password: "HEMANSHU01" },
-            { email: "machhinandan27@gmail.com", password: "Nandan4444" },
-            { email: "purvanshu1375@gmail.com", password: "Puru1375" },
-            // Add as many users as needed
-        ];
-    
-        function func(event) {
-            event.preventDefault(); // Prevent default form submission behavior
-    
-            var email = document.getElementById("email").value;
-            var password = document.getElementById("password").value;
-    
-            // Check if the entered email and password match any user
-            var authenticatedUser = users.find(function(user) {
-                return user.email === email && user.password === password;
-            });
-    
-            if (authenticatedUser) {
-                authenticatedUser.isLoggedIn = true;
-                // Redirect to the content page
-                window.location.href = "cont.html";
-            } else {
-                alert("Invalid email or password");
-            }
-        }
+$(".hamburger").click(function(){
+   $(".wrapper").toggleClass("collapse");
+});
 
-        document.addEventListener('contextmenu', (e) => e.preventDefault());
+$(".sidebar a").click(function(e) {
+  e.preventDefault();
+  var pageId = $(this).data("page");
+  $(".page").hide();
+  $("#" + pageId).show();
+  $(".sidebar a").removeClass("active");
+  $(this).addClass("active");
+});
 
-function ctrlShiftKey(e, keyCode) {
-  return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
-}
+// Show the first page by default
+$("#notes").show();
 
 document.onkeydown = (e) => {
   // Disable F12, Ctrl + Shift + I, Ctrl + Shift + J, Ctrl + U

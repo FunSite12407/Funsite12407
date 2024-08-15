@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +10,7 @@
 }
 
 body {
-  background: #86ffd7;
+  background: #e1ecf2;
 }
 
 .wrapper {
@@ -25,8 +27,8 @@ body {
 
 .wrapper .top_navbar .hamburger {
   width: 70px;
-  height: 100%; 
-  background: #00a46b;
+  height: 100%;
+  background: #2e4ead;
   padding: 15px 17px;
   border-top-left-radius: 20px;
   cursor: pointer;
@@ -35,7 +37,7 @@ body {
 .wrapper .top_navbar .hamburger div {
   width: 35px;
   height: 4px;
-  background: #acffda;
+  background: #92a6e2;
   margin: 5px 0;
   border-radius: 5px;
 }
@@ -53,7 +55,7 @@ body {
 }
 
 .wrapper .top_navbar .top_menu .logo {
-  color: #00a46b;
+  color: #2e4ead;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 3px;
@@ -70,13 +72,13 @@ body {
   height: 35px;
   line-height: 35px;
   text-align: center;
-  border: 1px solid #00a46b;
+  border: 1px solid #2e4ead;
   border-radius: 50%;
-  color: #00a46b;
+  color: #2e4ead;
 }
 
 .wrapper .top_navbar .top_menu ul li a:hover {
-  background: #00834d;
+  background: #4360b5;
   color: #fff;
 }
 
@@ -88,7 +90,7 @@ body {
   position: fixed;
   top: 70px;
   left: 10px;
-  background: #00a46b;
+  background: #2e4ead;
   width: 200px;
   height: calc(100% - 80px);
   border-bottom-left-radius: 20px;
@@ -101,7 +103,7 @@ body {
   color: #fff;
   position: relative;
   margin-bottom: 1px;
-  color: #acffda;
+  color: #92a6e2;
   white-space: nowrap;
 }
 
@@ -112,7 +114,7 @@ body {
   left: 0;
   width: 3px;
   height: 100%;
-  background: #acffda;
+  background: #92a6e2;
   display: none;
 }
 
@@ -126,9 +128,8 @@ body {
 }
 
 .wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active,
-.wrapper .top_navbar .hamburger:hover {
-  background: #006f4a;
+.wrapper .sidebar ul li a.active {
+  background: #4360b5;
   color: #fff;
 }
 
