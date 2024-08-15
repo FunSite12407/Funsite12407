@@ -43,7 +43,7 @@ body {
 .wrapper .top_navbar .top_menu {
   width: calc(100% - 70px);
   height: 100%;
-  background: #fff;
+  background: #b1ffed;
   border-top-right-radius: 20px;
   display: flex;
   justify-content: space-between;
