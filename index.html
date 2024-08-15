@@ -1,26 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funsite</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <div>
-        <div class="navigation">
-            <ul>
-                <li>Notes</li>
-                <li>IMPs</li>
-                <li>Papers</li>
-                <li>Paper Solutions</li>
-            </ul>
+  <body>
+    <div class="wrapper">
+      <div class="top_navbar">
+        <div class="hamburger">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
         </div>
+        <div class="top_menu">
+          <div class="logo">logo</div>
+          <ul>
+            <li>
+              <a href="#">
+                <i class="fas fa-search"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="#" class="active" data-page="notes">
+              <span class="icon"><i class="fas fa-notes"></i></span>
+              <span class="title">Notes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-page="imps">
+              <span class="icon"><i class="fas fa-imps"></i></span>
+              <span class="title">IMPs</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-page="papers">
+              <span class="icon"><i class="fas fa-Papers"></i></span>
+              <span class="title">Papers</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" data-page="paper-solutions">
+              <span class="icon"><i class="fas fa-paper-solutions"></i></span>
+              <span class="title">Paper Solutions</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="main_container">
+        <div class="page" id="notes" style="display: none;">Notes page content</div>
+        <div class="page" id="imps" style="display: none;">IMPs page content</div>
+        <div class="page" id="papers" style="display: none;">Papers page content</div>
+        <div class="page" id="paper-solutions" style="display: none;">Paper Solutions page content</div>
+      </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="javascript.js"></script>
-</body>
-
+  </body>
 </html>
