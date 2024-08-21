@@ -153,7 +153,7 @@ body {
   padding: 15px;
   font-size: 14px;
   line-height: 22px;
-  /* width: 100%; */
+  width: calc(100% - 220px);
   height: calc(100% - 80px);
   border-bottom-right-radius: 20px;
 }
@@ -177,6 +177,10 @@ body {
 .wrapper.collapse .main_container {
   width: (100% - 70px);
   margin-left: 70px;
+}
+
+.wrapper.collapse .main_container .page {
+  width: calc(100% - 90px);
 }
 
 /* .main_container .page {
